@@ -9,9 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      dependency-submission: write  # Ensure write permissions for dependency submission
 
     steps:
       - uses: actions/checkout@v4
