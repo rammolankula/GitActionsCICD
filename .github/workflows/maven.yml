@@ -9,10 +9,6 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      dependency-submission: write  # Ensure write permissions for dependency submission
-
     steps:
       - uses: actions/checkout@v4
 
@@ -29,9 +25,8 @@ jobs:
       - name: Upload Maven Dependency Snapshot (Optional)
         uses: github/dependency-submission-action@v1
         with:
-          # Inputs as required, such as path to your pom.xml, etc.
           repository: ${{ github.repository }}  # Automatically submits dependency data to GitHub
-          
+
       # You could also try submitting dependencies manually if you need
       - name: Submit Dependency Snapshot Manually (Optional)
         run: |
