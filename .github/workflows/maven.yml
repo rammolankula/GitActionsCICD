@@ -22,6 +22,7 @@ jobs:
       - name: Build with Maven
         run: mvn clean install
 
+
       # Upload Maven Dependency Snapshot using GitHub's official action
       - name: Upload Maven Dependency Snapshot
         uses: github/dependency-submission-action@v1  # Official GitHub action for submitting dependency snapshot
